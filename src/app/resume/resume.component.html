@@ -1,0 +1,84 @@
+
+<h6>
+<div class="container">
+    <h1 style="text-align: center;">Resume</h1>
+    <hr><hr>
+      <table style="border: 1;width: 100%;">
+        
+          <tr style="text-align: left;font-size: x-large">
+            <th>
+              <ul>
+                <li>Name : {{user.name}}</li>
+                <li>Addres : {{user.candidate.address}}</li>
+                <li>Email Address : {{user.email}}</li>
+                <li>Mobile Number : {{user.mobile}}</li>
+                <li>Gender : {{user.candidate.gender}}</li>
+                <li>Age : {{user.candidate.age}}</li>               
+              </ul>            
+          </th>         
+          </tr>
+          
+          <tr style="font-size: x-large">
+              <h2 style="font-size: xx-large">Objective : </h2>
+              {{user.candidate.objective}}
+              <br>
+              <br>
+              <h2 style="font-size: xx-large">Educational Details : </h2>
+              <br>
+              <table class="table" style="border: 1;width: 100%;">
+                <tr style="font-size: x-large;">
+                  <th>Exam</th>
+                  <th>Percentage</th>
+                  <th>Year Of Passing</th>
+                </tr>
+                 <tr *ngFor="let e of edu" style="font-size: x-large;">
+                    <td>{{e.exam}}</td>
+                    <td>{{e.percentage}}</td>
+                    <td>{{e.passYear}}</td>
+                  </tr>     
+              </table>
+              <br>
+              <br>
+              <h2 style="font-size: xx-large">Project Details : </h2>
+              <ul>
+                <li style="font-size: x-large">
+                  <b>Project Title : </b>{{user.candidate.pTitle}}
+                </li>
+                <li style="font-size: x-large">
+                  <b>Project Description : </b>{{user.candidate.pDesc}}
+                </li>
+              </ul>
+            </tr>
+        </table>
+        <hr>
+        <hr>
+        <br> 
+        <br>
+        <br>
+        <h3 style="font-size: x-large">Declaration</h3> 
+        <h4 style="font-size: x-large">
+            I do hereby declare that the above particulars of facts and information stated are true, 
+            correct and complete to the best of my belief and knowledge.
+        </h4>
+        <h4 style="font-size: x-large">
+          Date:&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;/   
+          <br>
+          <br>
+          Place:
+        </h4> 
+        <h4 style="position: relative;left:60%;font-size: x-large">
+          Name
+          <br>
+          <br>
+          Singnature:
+        </h4> 
+  </div>
+<br>
+<br>
+<br>   
+</h6>
+  <br><br><br><br><br>
+ 
+<button style="height: 40px;width: 80px;position: relative;left: 50%;" type="button" (click)="gotoCandidate()" class="btn btn-large btn-block btn-primary">Back</button>
+
+  

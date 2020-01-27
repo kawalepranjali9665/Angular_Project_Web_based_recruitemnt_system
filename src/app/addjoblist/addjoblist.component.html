@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container" class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="padding-left: 10%;padding-bottom: 5%">
+    <h2 style="text-align: center;font-size: xx-large">Enter JobList</h2>
+    
+    <form #JobList="ngForm" (ngSubmit)="addJoblist(JobList)" role="form" ngNativeValidate>
+      <div class="form-group">
+        <label for="name" style="font-size: x-large">Job Profile:</label>
+        <select style="width: 100%;height: 40px;font-size: x-large" ngModel class="from-control" name="jobProfile" id="jobProfile"  required="required">
+            <option value="Java Developer">Java Developer</option>
+            <option value="Software Developer">Software Developer</option>
+            <option value="Android Developer">Android Developer</option>
+            <option value="Web Developer">Web Developer</option>
+            <option value="Full Stack Developer">Full Stack Developer</option>
+            <option value="Network Engineer">Network Engineer</option>
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="Professor">Professor</option>
+            <option value="Teacher">Teacher</option>
+            <option value="Clark">Clark</option>
+            <option value="Librarian">Librarian</option>
+          </select>
+      </div>
+      <div class="form-group">
+          <label for="jobDesc" style="font-size: x-large">Job Description:</label>
+          <textarea ngModel class="form-control" rows="4" cols="50" style="width: 100%;height: 150px;font-size: x-large"   placeholder="Enter Profile Description" name="jobDesc"></textarea>
+        </div>
+      <div class="form-group" style="font-size: x-large">
+        <label for="interviewDate">Interview Date:</label>
+        <input type="date" ngModel class="form-control"  style="width: 100%;height: 50px;font-size: x-large"  name="interviewDate" required>
+      </div>
+      <div class="form-group">
+        <label for="interviewTime" style="font-size: x-large">Interview Time:</label>
+        <input type="text" ngModel class="form-control" style="width: 100%;height: 50px;font-size: x-large" name="interviewTime" required>
+      </div>
+      <div class="form-group">
+        <label for="noOfVacancies" style="font-size: x-large">No Of Vacancies:</label>
+        <input type="number" ngModel class="form-control" style="width: 100%;height: 50px;font-size: x-large" placeholder="Enter vacancies" name="noOfVacancies" required>
+      </div>
+      <div class="form-group">
+        <label for="salary" style="font-size: x-large">Salary:</label>
+        <input type="text" ngModel class="form-control" style="width: 100%;height: 50px;font-size: x-large" placeholder="Enter Salary" name="salary" required>
+      </div>
+      <div class="form-group">
+        <label for="location" style="font-size: x-large">Job Location:</label>
+        <select style="width: 100%;height: 40px;font-size: x-large" ngModel class="from-control"  name="location" id="location"  required="required">
+            <option value="Mumbai">Mumbai</option>
+            <option value="Pune">Pune</option>
+            <option value="Banglore">Banglore</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Hydrabad">Hydrabad</option>
+          </select>
+        </div>
+      <br>
+      <button style="height: 40px;width: 160px;" type="submit" class="btn btn-primary">Save and Post</button>
+      <button style="height: 40px;width: 80px;position: relative;left: 50%;" type="button" (click)="gotoEmployer()" class="btn btn-large btn-block btn-primary">Back</button>    
+
+    </form>
+  </div>
+</body>
+</html>
+
+

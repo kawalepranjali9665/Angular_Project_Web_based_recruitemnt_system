@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Account Recovery</h1>
+    <br>
+    <br>
+    <br>
+    <form role="form" style="width: 40% ; margin: auto; ">
+    
+      <div class="form-group">
+        <h4 style="color:darkgrey; text-align: center; ">This helps show that this account really belongs to you</h4>
+         <input [(ngModel)]="name" style="width: 500px;height: 40px;position: relative;left: 15%;font-size: x-large;" type="text" class="form-control" name="email" id="email" placeholder="Enter EmailId">
+       </div>
+    <br>
+      
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" style="height: 40px;width: 80px;"  (click)="getotp(name)"  class="btn btn-success" style="margin-left: 40%;">send OTP</button>
+    </form>
+    
+</body>
+</html>
+
+  

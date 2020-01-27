@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container" class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="padding-left: 10%;padding-bottom: 5%;">
+    <h2 style="text-align: center;">Enter Details</h2>
+    <h3 style="font-size: xx-large">Personal Details : </h3>
+    <form #CandForm="ngForm" (ngSubmit)="addCand(CandForm)" role="form" ngNativeValidate>
+      <div class="form-group">
+        <label for="age" style="font-size: xx-large">Age:</label>
+        <input type="number" ngModel class="form-control" style="width: 20%;height: 50px;font-size: x-large"placeholder="Enter age" name="age" required>
+      </div>
+      <div class="form-group">
+          <label for="gender" style="font-size: xx-large">Gender:</label>
+          <select style="width: 20%;height: 40px;font-size: x-large" ngModel class="from-control" name="gender" id="gender"  required="required">
+              <option value="Female">Female</option>
+              <option value="Male">Male</option>
+              <option value="Other">Other</option>
+            </select>
+        </div>
+      <div class="form-group">
+          <label for="address" style="font-size: xx-large">Address:</label>
+          <textarea style="height: 150px;font-size: x-large" rows="5" cols="50" ngModel class="form-control" placeholder="Enter address" name="address" required></textarea>
+        </div>
+      <div class="form-group">
+        <h3 style="font-size: xx-large">Carrer Objective</h3>
+        <textarea ngModel class="form-control" rows="5" cols="50" style="font-size: x-large"  placeholder="Job Objective" name="objective"></textarea>
+      </div>
+      <h3 style="font-size: xx-large">Project Details : </h3>
+      <div class="form-group">
+        <label for="pTitle" style="font-size: xx-large">Project Title:</label>
+        <textarea ngModel class="form-control" rows="3" cols="50" style="font-size: x-large" placeholder="Enter Project Title" name="pTitle"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="pDesc" style="font-size: xx-large">Project Description</label> 
+        <textarea ngModel class="form-control" rows="7" cols="50" required="required" style="font-size: x-large" placeholder="Enter Project Description" name="pDesc"></textarea>
+      </div>
+     
+      <br>
+      <button style="width: 150px;height: 50px;font-size: larger" type="submit" class="btn btn-primary">Save</button>
+    </form>
+  </div>
+  
+</body>
+</html>

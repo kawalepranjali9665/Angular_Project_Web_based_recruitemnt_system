@@ -1,0 +1,23 @@
+
+.navbar .navbar-nav{
+  display: inline-block;
+  float: none;
+  vertical-align:top;
+}
+.navbar{
+opacity: 0.8;
+background-color: black;
+text-align: center;
+font-size: 25px;
+}
+a:hover {
+  background-color: green;
+}
+/* h1{
+  background-image: url("/assets/img/header.jpeg");
+   background-size: cover; 
+   background-repeat: no-repeat; 
+  position: fixed;
+  /* height: 500%; */
+  /* width: 98%; */
+

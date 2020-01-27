@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <h1 style="text-align: center;"></h1>
+    <hr><hr>
+      <table style="border: 1;width: 100%;font-size: x-large">
+        
+          <tr style="text-align: left;">
+            <th>
+              <h1>Company details</h1>
+              <ul>
+                <li>Comapany mail id  :  {{user[0].email}}</li>
+                <li>Name Of Organization  :  {{user[0].employer.companyName}}</li>
+                <li>Contact No. :  {{user[0].mobile}}</li>
+                <li>Adress Info. :  {{user[0].employer.address}}</li>              
+              </ul>            
+          </th>          
+          </tr>            
+              <br>
+              <h2>Vacancy Details : </h2>
+              <br>
+              <table class="table" style="border: 1;text-align: center;width: 100%;font-size: x-large">
+                <tr>
+                  <th>Job Profile</th>
+                  <th>Job Description</th>
+                  <th>No Of Vacancies</th>
+                  <th>Salary In PA</th>
+                  <th>Location</th>
+                  <th>Interview Date</th>
+                  <th>Interview Time</th>
+                </tr>
+                 <tr *ngFor="let c of cmp">
+                    <td>{{c.jobProfile}}</td>
+                    <td>{{c.jobDesc}}</td>
+                    <td>{{c.noOfVacancies}}</td>
+                    <td>{{c.salary}}</td>
+                    <td>{{c.location}}</td>
+                    <td>{{c.interviewDate|date:"yyyy/MM/dd"}}</td>
+                    <td>{{c.interviewTime}}</td>                 
+                  </tr>
+              </table>
+              </table>
+     </div>
+     <button style="height: 40px;width: 80px;position: relative;left: 50%;" type="button" (click)="gotoEmployer()" class="btn btn-large btn-block btn-primary">Back</button>    
+             
+</body>
+</html>
+

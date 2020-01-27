@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <br><br><br>
+  <form #Search="ngForm" class="body"  (ngSubmit)="Searching(Search)" role="form" ngNativeValidate>
+    
+  <div class="container" style="align-content: center;position: relative;left:15%">
+      <div class="col-sm">
+        <table>
+          <h2  class="glyphicon glyphicon-search" style="color:orange;font-size: 1cm;position: relative;left: 15%;">Find Nearest and suitable Job</h2>
+          <tr>
+            <td>
+          <select style="width: 300px;height: 40px;font-size: large" ngModel class="from-control" name="location" id="location">
+            <option style="font-size: larger" value="Mumbai">Mumbai</option>
+            <option style="font-size: larger" value="Pune">Pune</option>
+            <option style="font-size: larger" value="Banglore">Banglore</option>
+            <option style="font-size: larger" value="Chennai">Chennai</option>
+            <option style="font-size: larger" value="Hydrabad">Hydrabad</option>
+          </select>
+          <select  style="width: 300px;height: 40px;font-size: large" ngModel class="from-control" name="jobProfile" id="jobProfile"  required="required">
+            <option style="font-size: larger" value="Java Developer">Java Developer</option>
+            <option style="font-size: larger" value="Software Developer">Software Developer</option>
+            <option style="font-size: larger" value="Android Developer">Android Developer</option>
+            <option style="font-size: larger" value="Web Developer">Web Developer</option>
+            <option style="font-size: larger" value="Full Stack Developer">Full Stack Developer</option>
+            <option style="font-size: larger" value="Network Engineer">Network Engineer</option>
+            <option style="font-size: larger" value="Software Engineer">Software Engineer</option>
+            <option style="font-size: larger" value="Professor">Professor</option>
+            <option style="font-size: larger" value="Teacher">Teacher</option>
+            <option style="font-size: larger" value="Clark">Clark</option>
+            <option style="font-size: larger" value="Librarian">Librarian</option>
+          </select>
+        </td>
+        &nbsp;
+        <td>
+         
+          <!-- <button style="height: 40px;width: 80px; color:lightblue;" class="btn aqua-gradient btn-rounded btn-sm my-0 btn btn-primary" type="submit" >Search</button> -->
+          <button type="submit" class="btn btn-rounded" style="width: 150px;height: 40px;font-size: x-large;background-color: orange">
+            <span class="glyphicon glyphicon-search"></span> Search
+          </button>
+        </td>
+        </tr>       
+        </table>
+      </div>
+    </div>
+    </form>
+    <br>
+    <div *ngFor="let c of user">
+      <div style="align-content: right;align-self: auto; left:15%" class="panel panel-default col-sm-8">
+          <div class="panel-heading">
+            <h4 style="font-size: 1cm;color: firebrick;position: relative;left: 35%">Vacancy Details</h4>
+          </div>
+          <div class="panel-body" style="font-size: 6mm">
+              <label>Companey Name :</label>{{c.employer.companyName}}<br>
+              <label>Address/Location : </label>{{c.employer.address}}<br>
+                <label>Position : </label>{{c.employer.joblist[0].jobProfile}}<br>
+                <label>Email :</label>{{c.email}}<br>
+               <label> Phone : </label>{{c.mobile}}<br>
+               <label>Description : </label>{{c.employer.joblist[0].jobDesc}}<br>
+               <label>Salary : </label>{{c.employer.joblist[0].salary}}<br>
+               <label>Location : </label>{{c.employer.joblist[0].location}}<br>
+               <label>Interview Date : </label>{{c.employer.joblist[0].interviewDate|date:"yyyy/MM/dd"}}<br>
+               <label>Interview Time : </label>{{c.employer.joblist[0].interviewTime}}<br>
+               <label>Number Of Vacancies : </label>{{c.employer.joblist[0].noOfVacancies}}<br>
+          </div>
+          <div class="panel-footer">
+            <input style="height: 60px;width:90px;font-size: x-large" type="button" (click)="Apply(c.employer.joblist[0].jobId)" class="btn-primary" value="Apply">
+          </div>
+        </div>
+      </div>            
+</body>
+</html>
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+    <div>
+      <div class="container" style="position: relative;left:18%;top: 250px;size: 100pc">
+         <!-- <div class="jumbotron"> -->
+           <b><h1 style="color:darkturquoise;font-size: 2cm">Login</h1></b>
+           <form  #loginForm="ngForm" (ngSubmit)="login(loginForm)" role="form" style="width: 50%;right:20%;top:10%">
+      
+              <div class="form-group">
+                <h3 style="color:darkturquoise;font-size: 0.8cm" class="glyphicon glyphicon-envelope">Email</h3>
+                <input style="height: 50px;font-size: x-large" type="email" ngModel class="form-control" name="email" placeholder="Enter Email" required="required">
+              </div>
+              <div class="form-group">
+                <h3 style="color:darkturquoise;font-size: 0.8cm" class="glyphicon glyphicon-lock">Password</h3>
+                <input style="height: 50px;font-size: x-large" type="password" ngModel class="form-control" name="password" placeholder="Enter Password" required="required">
+              </div>
+              <button style="width:100px;height: 40px;font-size: larger" type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <h3><a style="color:darkturquoise;font-size: 0.7cm" routerLink="/register">Register here</a></h3> 
+           
+    <div>
+      <h4 ><a  routerLink="/forgot" style="color:darkturquoise;font-size: 0.7cm">Forgot Password?</a></h4>
+      
+    </div>          
+         </div>
+       </div>
+      
+</body>
+</html>
+
+
+
+
+
+
+
+

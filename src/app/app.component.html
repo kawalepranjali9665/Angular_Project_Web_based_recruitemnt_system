@@ -1,0 +1,117 @@
+<div class="table-responsive"style="background-image: url(assets/img/hori.jpg);text-align: center;">
+    <br>
+     <h1 style="color: white; font-family: fantasy; font-weight: bold; font-size: 60px;">
+             Web Based Recruitment System
+             </h1>
+             <br><br>
+ </div> 
+ <br> 
+    <div>
+        <nav class="navbar navbar-default navbar-static-top temp"  role="navigation" style="position: relative;top:5%" >           
+        <ul class="nav navbar-nav" style="left:30%;">
+            <li>
+                <a style="font-size: xx-large;color: orange" class="glyphicon glyphicon-home" routerLink="/home">HOME</a>
+            </li>
+            <li>
+                <a style="font-size: xx-large;color: orange" class="glyphicon glyphicon-hand-right" routerLink="/aboutus">ABOUTUS</a>
+            </li>
+            <li>
+                <a style="font-size: xx-large;color: orange" class="glyphicon glyphicon-user" routerLink="/employer">EMPLOYERS</a>
+            </li>
+            <li>
+                <a style="font-size: xx-large;color: orange" class="glyphicon glyphicon-user" routerLink="/candidate">CANDIDATE</a>
+            </li>
+            <li>
+                <a style="font-size: xx-large;color: orange" class="glyphicon glyphicon-search" routerLink="/search">SEARCH</a>
+            </li>
+            <li>
+                <a style="font-size: xx-large;color: orange" class="glyphicon glyphicon-earphone" routerLink="/contactus">CONTACTUS</a>
+            </li>
+            <li *ngIf="!isLogin">
+                <a style="font-size: xx-large;color: orange" class="glyphicon glyphicon-log-in" routerLink="/login">LOGIN</a>
+              </li>
+              <li *ngIf="isLogin">
+                <a style="font-size: xx-large;color: orange" class="glyphicon glyphicon-log-out" (click)="logout()">LOGOUT</a>
+              </li>
+        </ul>
+        </nav>
+      
+ </div>
+
+<router-outlet></router-outlet> 
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Title Page</title>
+
+        
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+       
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+
+<div class="table-responsive">
+    <table class="table">
+        <tr>
+          <td> <img src="assets/img/index.jpeg" style="text-align: left ; height:150px; width: 150px;"></td>
+          <td >
+              <h1 style="text-align: center; color: slateblue; font-family: fantasy; font-weight: bold; font-size: 60px;text-align: right;">
+                <marquee behavior="alternate">Web Based Recruitment System</marquee>
+                </h1>
+          </td>
+        </tr>
+      </table> 
+    </div>  
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" >
+        
+        <ul class="nav navbar-nav" style="height: 50px; width: 100%; color:white;font-size: large;position: absolute;left: 20%;">
+            <li>
+                <a routerLink="/home">Home</a>
+            </li>
+            <li>
+                <a routerLink="/aboutus">About Us</a>
+            </li>
+            <li>
+                <a routerLink="/employee">Employee</a>
+            </li>
+            <li>
+                <a routerLink="/candidate">Candidate</a>
+            </li>
+            <li>
+                <a routerLink="/search">Search</a>
+            </li>
+            <li>
+                <a routerLink="/contactus">Contact Us</a>
+            </li>
+            <li *ngIf="!isLogin">
+                <a routerLink="/login">Login</a>
+              </li>
+              <li *ngIf="isLogin">
+                <a (click)="logout()">Logout</a>
+              </li>
+        </ul>
+   
+    </nav>
+</body>
+</html>
+    <app-footer></app-footer> 
+    <router-outlet></router-outlet>
+-->
+     

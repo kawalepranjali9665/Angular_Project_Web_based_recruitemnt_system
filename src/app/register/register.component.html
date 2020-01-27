@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <br><br>
+      <div class="jumbotron" style="width: 60%;position: relative;left: 15%;">
+        <h2>Register Here</h2><br>
+        <form #myForm="ngForm" (ngSubmit)="register(myForm)"   role="form" style="width: 50%" ngNativeValidate>
+            <div class="form-group">
+              <h4 style="color:black;font-size: x-large">Full Name :</h4>
+              <input type="text" style="height: 50px;width:600px;font-size: x-large" ngModel class="form-control" name="name" placeholder="Enter Name" required="required">
+            </div>
+            <div class="form-group">
+              <h4 style="color: black;font-size: x-large">Email :</h4>
+              <input type="email" style="height: 50px;width:600px;font-size: x-large" ngModel class="form-control" name="email" placeholder="Enter Email"  required="required">
+            </div>
+            <div class="form-group">
+              <h4 style="color: black;font-size: x-large">Password :</h4>
+              <input type="password" style="height: 50px;width:600px;font-size: x-large" ngModel class="form-control" name="password" placeholder="Enter Password"  required="required" minlength="6" maxlength="10">
+            </div>
+            <div class="form-group">
+              <h4 style="color: black;font-size: x-large">Mobile No :</h4>
+              <input type="tel" style="height: 50px;width:600px;font-size: x-large" ngModel class="form-control" name="mobile" placeholder="Enter Mobile Number"  required="required">
+            </div>
+            <div class="form-group">
+              <h4 style="color: black;font-size: x-large">Select Role :</h4>    
+              <select style="height: 40px;width:600px;font-size: x-large" ngModel class="from-control" name="type" id="type"  required="required">
+                <option value="CANDIDATE">Candidate</option>
+                <option value="EMPLOYER">Employer</option>
+              </select>
+            </div>
+            <button style="width:100px;height: 50px;font-size: larger" type="submit" class="btn btn-primary">Register</button>
+          </form>
+      </div>
+    </div>
+  </div>  
+</body>
+</html>

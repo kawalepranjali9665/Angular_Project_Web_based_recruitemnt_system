@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container" class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="padding-left: 10%;padding-bottom: 5%;">
+    <h2 style="text-align: center; color: black">Company Details</h2>
+    <form #ComanyForm="ngForm" (ngSubmit)="addCompany(ComanyForm)" role="form" ngNativeValidate>
+      <div class="form-group">
+        <label for="comapanyname" style="font-size: x-large">Comany Name:</label>
+        <input type="text" ngModel class="form-control" style="width: 100%;height: 50px;font-size: x-large"  placeholder="Enter Company Name" name="companyName" required>
+      </div>        
+      <div class="form-group">
+          <label for="address"  style="font-size: x-large">Company Address:</label>
+          <textarea ngModel class="form-control" placeholder="Enter address" style="width: 100%;height: 150px;font-size: x-large"  name="address" required></textarea>
+        </div>
+      <button style="height: 40px;width: 80px;" type="submit" class="btn btn-primary">Save</button>
+      <button style="height: 40px;width: 80px;position: relative;left: 50%;" type="button" (click)="gotoEmployer()" class="btn btn-large btn-block btn-primary">Back</button>    
+    </form>
+  </div>
+
+</body>
+</html>
+  

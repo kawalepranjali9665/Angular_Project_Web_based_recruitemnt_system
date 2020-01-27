@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body >
+  <br>
+  <div *ngFor="let c of result">
+    <div style="align-content: right;align-self: auto; left:15%" class="panel panel-default col-sm-8">
+        <div class="panel-heading">
+          <h4 style="font-size: 1cm;color: firebrick;position: relative;left: 35%">Vacancy Details</h4>
+        </div>
+        <div class="panel-body" style="font-size: 6mm">
+            <label>Companey Name :</label>{{c.employer.companyName}}<br>
+            <label>Address/Location : </label>{{c.employer.address}}<br>
+              <label>Position : </label>{{c.employer.joblist[0].jobProfile}}<br>
+              <label>Email :</label>{{c.email}}<br>
+             <label> Phone : </label>{{c.mobile}}<br>
+             <label>Description : </label>{{c.employer.joblist[0].jobDesc}}<br>
+             <label>Salary : </label>{{c.employer.joblist[0].salary}}<br>
+             <label>Location : </label>{{c.employer.joblist[0].location}}<br>
+             <label>Interview Date : </label>{{c.employer.joblist[0].interviewDate|date:"yyyy/MM/dd"}}<br>
+             <label>Interview Time : </label>{{c.employer.joblist[0].interviewTime}}<br>
+             <label>Number Of Vacancies : </label>{{c.employer.joblist[0].noOfVacancies}}<br>
+        </div>
+        <div class="panel-footer">
+          <input style="height: 60px;width:90px;font-size: x-large" type="button" (click)="Apply(c.employer.joblist[0].jobId)" class="btn-primary" value="Apply">
+        </div>
+      </div>
+    </div>            
+      </body>
+      </html>
